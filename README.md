@@ -13,15 +13,13 @@ npm install --save react-html-comment
 ## Usage
 
 ```tsx
-import * as React from 'react'
+import * as React from "react";
 
-import MyComponent from 'react-html-comment'
+import HTMLComment from "react-html-comment";
 
 class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent />
-    )
+  render() {
+    return <HTMLComment text="this is a html comment" />;
   }
 }
 ```
