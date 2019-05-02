@@ -1,23 +1,20 @@
-/**
- * @class ExampleComponent
- */
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
-import * as React from 'react'
+export type Props = { text: string };
 
-import styles from './styles.css'
+const HTMLComment = ({ text }: Props) => {
+  const ref = React.createRef<HTMLSpanElement>();
 
-export type Props = { text: string }
+  React.useLayoutEffect(() => {
+    if (ref.current) {
+      let el: HTMLSpanElement = ref.current;
+      ReactDOM.unmountComponentAtNode(el);
+      el.outerHTML = `<!-- ${text} -->`;
+    }
+  }, [ref, text]);
 
-export default class ExampleComponent extends React.Component<Props> {
-  render() {
-    const {
-      text
-    } = this.props
+  return <span ref={ref} />;
+};
 
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+export default HTMLComment;

@@ -1,7 +1,7 @@
-import ExampleComponent from './'
+import HTMLComment from "./";
 
-describe('ExampleComponent', () => {
-  it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
-  })
-})
+describe("HTMLComment", () => {
+  it("is truthy", () => {
+    expect(HTMLComment).toBeTruthy();
+  });
+});
