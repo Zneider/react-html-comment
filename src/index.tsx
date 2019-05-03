@@ -9,8 +9,12 @@ const HTMLComment = ({ text }: Props) => {
   React.useLayoutEffect(() => {
     if (ref.current) {
       let el: HTMLSpanElement = ref.current;
+      const parent = el.parentNode;
+      const comm = document.createComment(text);
+      if (parent) {
+        parent.replaceChild(comm, el);
+      }
       ReactDOM.unmountComponentAtNode(el);
-      el.outerHTML = `<!-- ${text} -->`;
     }
   }, [ref, text]);
 
