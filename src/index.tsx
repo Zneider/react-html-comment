@@ -11,12 +11,16 @@ const HTMLComment = ({ text }: Props) => {
       let el: HTMLSpanElement = ref.current;
       const parent = el.parentNode;
       const comm = document.createComment(text);
-      if (parent) {
-        parent.replaceChild(comm, el);
+      try {
+        if (parent && parent.contains(el)) {
+          parent.replaceChild(comm, el);
+          ReactDOM.unmountComponentAtNode(el);
+        }
+      } catch (err) {
+        console.error(err);
       }
-      ReactDOM.unmountComponentAtNode(el);
     }
-  }, [ref, text]);
+  }, []);
 
   return <span ref={ref} />;
 };
