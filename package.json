@@ -19,9 +19,6 @@
     "start": "rollup -c -w",
     "prepare": "yarn run build"
   },
-  "dependencies": {
-    "react-html-comment": "^1.0.1"
-  },
   "peerDependencies": {
     "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
