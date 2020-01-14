@@ -1,60 +1,51 @@
 {
   "name": "react-html-comment",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "description": "Component for writing comments in the HTML",
   "author": "Zneider",
   "license": "MIT",
   "repository": "Zneider/react-html-comment",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
+  "browser": "dist/index.umd.js",
   "scripts": {
-    "test": "cross-env CI=1 react-scripts-ts test --env=jsdom",
-    "test:watch": "react-scripts-ts test --env=jsdom",
-    "build": "rollup -c",
-    "start": "rollup -c -w",
-    "prepare": "yarn run build"
+    "start": "styleguidist server",
+    "test": "jest",
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "HTML comments",
+    "comments",
+    "code comments",
+    "inline comments"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.8.0",
+    "@babel/preset-env": "^7.8.2",
+    "@babel/preset-react": "^7.8.0",
+    "@testing-library/react": "^9.4.0",
+    "babel-loader": "^8.0.6",
+    "jest": "^24.9.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-styleguidist": "^10.4.2",
+    "rollup": "^1.29.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-terser": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "webpack": "^4.41.5"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.4",
-    "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0"
+    "react": "^16.x",
+    "react-dom": "^16.x"
   },
-  "devDependencies": {
-    "@svgr/rollup": "^4.3.0",
-    "@types/jest": "^24.0.14",
-    "@types/react": "^16.8.19",
-    "@types/react-dom": "^16.0.5",
-    "babel-core": "^6.26.3",
-    "babel-runtime": "^6.26.0",
-    "cross-env": "^5.1.4",
-    "gh-pages": "^2.0.1",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "react-scripts-ts": "^3.1.0",
-    "rollup": "^1.15.2",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-commonjs": "^10.0.0",
-    "rollup-plugin-node-resolve": "^5.0.2",
-    "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-postcss": "^2.0.3",
-    "rollup-plugin-typescript2": "^0.21.1",
-    "rollup-plugin-url": "^2.2.2",
-    "typescript": "^3.5.1"
+  "dependencies": {
+    "prop-types": "^15.7.2"
   },
   "resolutions": {
-    "react-scripts-ts/**/svgo": "1.0.0",
-    "lodash.template": "^4.5.0",
-    "lodash": "^4.17.13",
-    "js-yaml": "^3.13.1",
-    "mem": "^4.0.0",
-    "webpack-dev-server": "^3.1.11"
-  },
-  "files": [
-    "dist"
-  ]
+    "fsevents": "1.2.9"
+  }
 }
