@@ -1,6 +1,6 @@
 {
   "name": "react-html-comment",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Component for writing comments in the HTML",
   "author": "Zneider",
   "license": "MIT",
@@ -47,5 +47,8 @@
   },
   "resolutions": {
     "fsevents": "1.2.9"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
