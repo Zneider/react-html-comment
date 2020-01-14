@@ -1,1 +1,1 @@
-export { default as HTMLComment } from './components/HTMLComment.jsx';
+export { default } from './components/HTMLComment.jsx';
