@@ -1,22 +1,31 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { useLayoutEffect } from '../utils/useIsomorphicLayoutEffect'
 import PropTypes from 'prop-types';
 
 const HTMLComment = ({ text }) => {
   const ref = React.createRef();
 
-  React.useLayoutEffect(() => {
+  useLayoutEffect(() => {
+    let el = null
+    let parent = null
+    let comm = null
+
     if (ref.current) {
-      let el = ref.current;
-      const parent = el.parentNode;
-      const comm = document.createComment(text);
+      el = ref.current;
+      parent = el.parentNode;
+      comm = document.createComment(` ${text.trim()} `);
       try {
         if (parent && parent.contains(el)) {
-          parent.insertBefore(comm, el);
-          ReactDOM.unmountComponentAtNode(parent);
+          parent.replaceChild(comm, el);
         }
       } catch (err) {
         console.error(err);
+      }
+    }
+
+    return () => {
+      if(parent && el && comm) {
+        parent.replaceChild(el, comm)
       }
     }
   }, []);
