@@ -22,7 +22,7 @@ import HTMLComment from 'react-html-comment';
 
 class Example extends React.Component {
   render() {
-    return <HTMLComment text="this is a html comment" />;
+    return <HTMLComment text="this is an html comment" />;
   }
 }
 ```
@@ -31,7 +31,7 @@ Output in source:
 
 ```
 ...
-<!--this is a html comment-->
+<!--this is an html comment-->
 ...
 ```
 
