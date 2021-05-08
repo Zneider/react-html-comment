@@ -1,6 +1,6 @@
 {
   "name": "react-html-comment",
-  "version": "2.0.6",
+  "version": "2.0.8",
   "description": "Component for writing comments in the HTML",
   "author": "Zneider",
   "license": "MIT",
@@ -46,7 +46,8 @@
     "prop-types": "^15.7.2"
   },
   "resolutions": {
-    "immer": "^8.0.1"
+    "immer": "^8.0.1",
+    "lodash": "^4.17.21"
   },
   "files": [
     "dist"
