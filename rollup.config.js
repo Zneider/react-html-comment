@@ -7,7 +7,7 @@ import { uglify } from 'rollup-plugin-uglify';
 
 import packageJSON from './package.json';
 const input = './src/index.js';
-const minifyExtension = pathToFile => pathToFile.replace(/\.js$/, '.min.js');
+const minifyExtension = (pathToFile) => pathToFile.replace(/\.js$/, '.min.js');
 
 export default [
   // CommonJS
@@ -16,6 +16,7 @@ export default [
     output: {
       file: packageJSON.main,
       format: 'cjs',
+      exports: 'default',
     },
     plugins: [
       babel({
@@ -31,6 +32,7 @@ export default [
     output: {
       file: minifyExtension(packageJSON.main),
       format: 'cjs',
+      exports: 'default',
     },
     plugins: [
       babel({
