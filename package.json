@@ -1,6 +1,6 @@
 {
   "name": "react-html-comment",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "Component for writing comments in the HTML",
   "author": "Zneider",
   "license": "MIT",
@@ -52,7 +52,8 @@
     "react-simple-code-editor": "^0.11.0",
     "serialize-javascript": "^5",
     "glob-parent": "^6",
-    "browserslist": "^4.16.5"
+    "browserslist": "^4.16.5",
+    "cacache/tar": "^4.4.19"
   },
   "files": [
     "dist"
