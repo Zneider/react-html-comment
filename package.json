@@ -1,6 +1,6 @@
 {
   "name": "react-html-comment",
-  "version": "2.0.11",
+  "version": "2.0.13",
   "description": "Component for writing comments in the HTML",
   "author": "Zneider",
   "license": "MIT",
@@ -27,9 +27,10 @@
     "@testing-library/react": "^13.1.1",
     "babel-loader": "^8.2.2",
     "jest": "^28.0.3",
+    "jest-environment-jsdom": "^28.0.2",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-styleguidist": "^11.1.7",
+    "react-dom": "^18.1.0",
+    "react-styleguidist": "^11.2.0",
     "rollup": "^2.52.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -47,18 +48,19 @@
     "prop-types": "^15.7.2"
   },
   "resolutions": {
-    "immer": "^9.0.3",
     "lodash": "^4.17.21",
-    "react-simple-code-editor": "^0.11.0",
-    "serialize-javascript": "^5",
-    "glob-parent": "^6",
-    "browserslist": "^4.16.5",
-    "cacache/tar": "^4.4.19"
+    "ansi-regex": "^4.1.1",
+    "serialize-javascript": "^3.1.0",
+    "glob-parent": "^5.1.2",
+    "node-forge": "^1.0.0"
   },
   "files": [
     "dist"
   ],
   "jest": {
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "./test/setupTests.js"
+    ]
   }
 }

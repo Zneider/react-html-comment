@@ -13,7 +13,7 @@ const HTMLComment = ({ text }) => {
     if (ref.current) {
       el = ref.current;
       parent = el.parentNode;
-      comm = document.createComment(` ${text.trim()} `);
+      comm = global.document.createComment(` ${text.trim()} `);
       try {
         if (parent && parent.contains(el)) {
           parent.replaceChild(comm, el);
