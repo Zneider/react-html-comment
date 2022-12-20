@@ -4,12 +4,18 @@ import resolve from 'rollup-plugin-node-resolve';
 import external from 'rollup-plugin-peer-deps-external';
 import { terser } from 'rollup-plugin-terser';
 import { uglify } from 'rollup-plugin-uglify';
+import dts from 'rollup-plugin-dts';
 
 import packageJSON from './package.json';
 const input = './src/index.js';
 const minifyExtension = (pathToFile) => pathToFile.replace(/\.js$/, '.min.js');
 
 export default [
+  {
+    input: './types/index.d.ts',
+    output: [{ file: 'dist/index.d.ts', format: 'es' }],
+    plugins: [dts()],
+  },
   // CommonJS
   {
     input,

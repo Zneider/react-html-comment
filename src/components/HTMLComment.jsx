@@ -2,7 +2,11 @@ import React from 'react';
 import { useLayoutEffect } from '../utils/useIsomorphicLayoutEffect'
 import PropTypes from 'prop-types';
 
-const HTMLComment = ({ text }) => {
+/**
+ * @param {{text: string}} props
+ */
+const HTMLComment = (props) => {
+  const { text } = props;
   const ref = React.createRef();
 
   useLayoutEffect(() => {
