@@ -5,7 +5,8 @@
     "allowJs": true,
     "outDir": "types",
     "target": "esnext",
-    "declaration": true
+    "declaration": true,
+    "esModuleInterop": true
   },
   "files": [
     "./src/index.js",
