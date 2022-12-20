@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "emitDeclarationOnly": true,
+    "allowJs": true,
+    "outDir": "types",
+    "target": "esnext",
+    "declaration": true
+  },
+  "files": [
+    "./src/index.js",
+    "./src/components/HTMLComment.jsx",
+    "./src/utils/useIsomorphicLayoutEffect.js"
+  ]
+}
